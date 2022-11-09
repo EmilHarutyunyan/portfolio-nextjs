@@ -1,0 +1,239 @@
+.about_section {
+  position: relative;
+  background: #000;
+  color: #fff2cf;
+  height: 100vh;
+  overflow: hidden;
+  .about_wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height: 100%;
+    &::before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 0;
+      background-image: url(../assets/bird-gold.jpg);
+      background-size: 30%;
+      background-position: 15rem;
+      background-repeat: no-repeat;
+      opacity: 0.3;
+      @media (max-width: 850px) {
+        background-size: 60%;
+        background-position-x: 7rem;
+        background-position-y: 5rem;
+      }
+      @media (max-width: 480px) {
+        background-size: 80%;
+        background-position-x: 2rem;
+        background-position-y: 8rem;
+      }
+    }
+    @media (max-width: 850px) {
+      row-gap: 60px;
+    }
+  }
+  @media (max-width: 850px) {
+    height: auto;
+  }
+  .about_text {
+    flex: 50% 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    @media (max-width: 1160px) {
+      flex: 55% 1;
+      padding-left: 2rem;
+      padding-right: 2rem;
+      padding-top: 5rem;
+    }
+    @media (max-width: 850px) {
+      flex: 100% 1;
+    }
+    @media (max-width: 480px) {
+      flex: 100% 1;
+      padding-left: 1.14rem;
+      padding-right: 1.14rem;
+    }
+    @media (max-width: 320px) {
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+    }
+  }
+  .about_name {
+    position: relative;
+    max-width: 40rem;
+    width: 100%;
+    text-align: center;
+    @media (max-width: 1160px) {
+      max-width: 32rem;
+    }
+    @media (max-width: 480px) {
+      max-width: 24rem;
+    }
+  }
+  .about_title {
+    position: relative;
+  }
+  .about_header {
+    font-size: 5rem;
+    text-transform: uppercase;
+    color: #fff2cf !important;
+    font-weight: normal !important;
+    font-style: normal !important;
+
+    span.word_wrapper3 {
+      color: #ffc02e;
+      font-weight: bold;
+      font-style: italic;
+    }
+    @media (max-width: 1160px) {
+      font-size: 4rem;
+    }
+    @media (max-width: 480px) {
+      font-size: 2.75rem;
+    }
+  }
+  .about_footer {
+    position: absolute;
+    display: block;
+    font-size: 1rem;
+    right: 1.5rem;
+    font-weight: 600;
+    @media (max-width: 1160px) {
+      font-size: 0.8rem;
+    }
+    span {
+      color: #ffc02e;
+      font-weight: bold;
+      font-style: italic;
+    }
+  }
+  .about_info {
+    max-width: 43rem;
+    margin-top: 2.5rem;
+    font-size: 1.5rem;
+    position: relative;
+    z-index: 10;
+    line-height: 2.2rem;
+    color: #fff2cf;
+
+    @media (max-width: 1160px) {
+      font-size: 1.3rem;
+      max-width: 34rem;
+    }
+    @media (max-width: 480px) {
+      font-size: 1.2rem;
+      line-height: 1.8rem;
+    }
+  }
+  span.word_wrapper3 {
+    color: #ffc02e;
+    font-weight: bold;
+    font-style: italic;
+  }
+}
+
+#model_wrapper {
+  flex: 35%;
+  overflow: hidden;
+  position: relative;
+  z-index: 10;
+  & canvas {
+    width: 100% !important;
+    height: 100% !important;
+  }
+  @media (max-width: 850px) {
+    flex: 100% 1;
+    width: 100%;
+    margin: 0 auto;
+    max-height: 600px;
+    & canvas {
+      width: 100% !important;
+      margin: 0 auto;
+      height: 100% !important;
+    }
+  }
+}
+
+.scroll_down {
+  display: none;
+  position: absolute;
+  width: 2rem;
+  height: 4.5rem;
+  right: 25px;
+  bottom: 10px;
+  cursor: pointer;
+  z-index: 20;
+  transform: rotate(180deg);
+  @media (max-width: 850px) {
+    display: block;
+  }
+  .chevron {
+    position: absolute;
+    width: 1.7rem;
+    height: 0.5rem;
+    opacity: 0;
+    transform: scale(0.3);
+    animation: move-chevron 3s ease-out infinite;
+    cursor: pointer;
+  }
+
+  .chevron:first-child {
+    animation: move-chevron 3s ease-out 1s infinite;
+  }
+
+  .chevron:nth-child(2) {
+    animation: move-chevron 3s ease-out 2s infinite;
+  }
+
+  .chevron:before,
+  .chevron:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    background: #ffc02e;
+  }
+
+  .chevron:before {
+    left: 0;
+    transform: skewY(-130deg);
+  }
+
+  .chevron:after {
+    right: 0;
+    width: 50%;
+    transform: skewY(130deg);
+  }
+
+  @keyframes move-chevron {
+    25% {
+      opacity: 1;
+    }
+    33.3% {
+      opacity: 1;
+      transform: translateY(0.6rem * 3.8);
+    }
+    66.6% {
+      opacity: 1;
+      transform: translateY(0.6rem * 5.2);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(0.6rem * 8) scale(0.5);
+    }
+  }
+}

@@ -1,0 +1,47 @@
+.preloader {
+  margin: 0px;
+  background: radial-gradient(rgb(70, 45, 6), rgb(0, 0, 0));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  overflow: hidden;
+  z-index: 99;
+  .container {
+    width: 350px;
+    height: 350px;
+    border-radius: 100%;
+    background: linear-gradient(
+      165deg,
+      rgb(0, 0, 0) 0%,
+      rgb(26, 10, 0) 40%,
+      rgb(40, 13, 0) 98%,
+      rgb(255, 177, 35) 100%
+    );
+    position: relative;
+  }
+  .loader::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    border-bottom: 0 solid rgba(255, 192, 46, 0.0196078431);
+    box-shadow: 0 -10px 20px 20px rgba(255, 192, 46, 0.2509803922) inset,
+      0 -5px 15px 10px rgba(255, 235, 0, 0.3137254902) inset,
+      0 -2px 5px rgba(255, 192, 46, 0.5019607843) inset,
+      0 -3px 2px rgba(255, 192, 46, 0.7333333333) inset, 0 2px 0px #ffc02e,
+      0 2px 3px #ffc02e, 0 5px 5px rgba(255, 192, 46, 0.5647058824),
+      0 10px 15px rgba(255, 192, 46, 0.3764705882),
+      0 10px 20px 20px rgba(255, 192, 46, 0.2509803922);
+    filter: blur(3px);
+    animation: 2s rotate linear infinite;
+  }
+  @keyframes rotate {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}

@@ -1,0 +1,250 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+*,
+:after,
+:before {
+  box-sizing: border-box;
+}
+:active,
+:focus {
+  outline: 0;
+}
+a:active,
+a:focus {
+  outline: 0;
+}
+aside,
+footer,
+header,
+nav {
+  display: block;
+}
+body,
+html {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  font-family: "Lato", sans-serif;
+  color: #fff2cf;
+  font-weight: 400;
+  cursor: url(../assets/logo2.svg), auto;
+}
+button,
+input,
+textarea {
+  font-family: inherit;
+}
+input::-ms-clear {
+  display: none;
+}
+button {
+  cursor: pointer;
+}
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+a,
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+ul li {
+  list-style: none;
+}
+img {
+  vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+  box-sizing: border-box;
+}
+
+.bgr {
+  height: 20px;
+  background-image: linear-gradient(to bottom, rgb(76 11 11 / 50%), rgb(0 0 0));
+}
+
+.scroll-down {
+  position: relative;
+  width: 27px;
+  height: 65px;
+  left: 50%;
+  bottom: 70px;
+  cursor: pointer;
+  .chevron {
+    position: absolute;
+    width: 1.5rem;
+    height: 0.3rem;
+    opacity: 0;
+    transform: scale(0.3);
+    animation: move-chevron 3s ease-out infinite;
+    cursor: pointer;
+  }
+
+  .chevron:first-child {
+    animation: move-chevron 3s ease-out 1s infinite;
+  }
+
+  .chevron:nth-child(2) {
+    animation: move-chevron 3s ease-out 2s infinite;
+  }
+
+  .chevron:before,
+  .chevron:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    background: #ffc02e;
+  }
+
+  .chevron:before {
+    left: 0;
+    transform: skewY(30deg);
+  }
+
+  .chevron:after {
+    right: 0;
+    width: 50%;
+    transform: skewY(-30deg);
+  }
+
+  @keyframes move-chevron {
+    25% {
+      opacity: 1;
+    }
+    33.3% {
+      opacity: 1;
+      transform: translateY(0.6rem * 3.8);
+    }
+    66.6% {
+      opacity: 1;
+      transform: translateY(0.6rem * 5.2);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(0.6rem * 8) scale(0.5);
+    }
+  }
+}
+
+body::-webkit-scrollbar {
+  width: 0.9vw;
+  background: #000;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(76, 11, 11, 0.5),
+    rgb(0, 0, 0)
+  );
+}
+body::-webkit-scrollbar-thumb {
+  background: linear-gradient(transparent, #ffc02e);
+  border-radius: 20px;
+}
+body::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(transparent, #ffff93);
+}
+
+.ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  background-color: rgba(31, 30, 30, 0.4);
+  border-radius: 100%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+  pointer-events: none;
+  background-color: #460d0099;
+}
+.dot {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  background-color: #ffc02e;
+  border-radius: 100%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+  pointer-events: none;
+}
+
+span.word_wrapper3 {
+  color: #ffc02e;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.active_category {
+  background: #ffc02e !important;
+  color: #fff2cf !important;
+}
+
+.back {
+  position: absolute;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  color: #ffc02e;
+  top: 0rem;
+  left: 2rem;
+  font-size: 5rem;
+  cursor: pointer;
+  @media screen and (max-width: 767px) {
+    font-size: 4rem;
+    left: 1rem;
+  }
+}
+
+.fire {
+  animation: animation 1s ease-in-out infinite alternate;
+}
+
+.burn {
+  animation: animation 0.65s ease-in-out infinite alternate;
+}
+
+@keyframes animation {
+  0% {
+    text-shadow: 0 0 20px #fefcc9, 10px -10px 30px #feec85,
+      -20px -20px 40px #ffae34, 20px -40px 50px #ec760c,
+      -20px -60px 60px #cd4606, 0 -80px 70px #973716, 10px -90px 80px #451b0e;
+  }
+  100% {
+    text-shadow: 0 0 20px #fefcc9, 10px -10px 30px #fefcc9,
+      -20px -20px 40px #feec85, 22px -42px 60px #ffae34,
+      -22px -58px 50px #ec760c, 0 -82px 80px #cd4606, 10px -90px 80px #973716;
+  }
+}
+
+#category_2 {
+  order: 4;
+}
+
+.aboutLink {
+  color: #ffc02e;
+  font-weight: 600;
+  transform: scale(1);
+  cursor: pointer !important;
+  text-decoration: underline;
+
+}
