@@ -6,7 +6,6 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import { STLLoader } from "three/examples/jsm/loaders/STLLoader";
 // Lib
 import { useAnimation, motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
 import Cursor from "../components/customCursor";
 // Components
 import AnimatedText from "../components/about/AnimatedText";
@@ -59,7 +58,6 @@ export default function AboutSection() {
 
   let aboutCanvasWrapper = useRef(false);
   const control = useAnimation();
-  const [ref, inView] = useInView();
   const router = useRouter();
 
   const about = useRef(null);
