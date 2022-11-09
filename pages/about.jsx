@@ -282,7 +282,7 @@ export default function AboutSection() {
               ideas forward. Instead, I have an almost impulsive need to act on
               them. You can read more about my background, experience, skills,
               education, and more in the PDF attached below.{" "}
-              <a href="/" className="aboutLink">
+              <a href="/Emil_CV_.pdf" className="aboutLink" target={'_blank'}>
                 CV
               </a>
             </motion.p>
