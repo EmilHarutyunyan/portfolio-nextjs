@@ -4,7 +4,7 @@ export const data = [
     title: "Sunplayer",
     category: "advanced",
     img: "/img/projectsDetal/sunplayer.gif",
-    website: "https://sunplayer.vercel.app/",
+    website: "https://sunmelody.vercel.app/",
     gitHub: "",
     height: "289px",
     desc: "Sunplayer: Lisen and find your music",
