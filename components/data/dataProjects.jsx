@@ -1,13 +1,13 @@
 export const data = [
   {
     id: Math.random(),
-    title: "Sunplayer",
+    title: "Sunmelody",
     category: "advanced",
     img: "/img/projectsDetal/sunplayer.gif",
     website: "https://sunmelody.vercel.app/",
     gitHub: "",
     height: "289px",
-    desc: "Sunplayer: Lisen and find your music",
+    desc: "Sunmelody: Lisen and find your music",
     about: "",
     tech: [
       "React",
